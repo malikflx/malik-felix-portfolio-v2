@@ -2,6 +2,7 @@ import PrimaryButton from "../../Components/Buttons/PrimaryButton";
 import SecondaryButton from "../../Components/Buttons/SecondaryButton";
 import About from "../About/About";
 import Work from "../Work/Work";
+import Contact from "../Contact/Contact";
 
 const LandingPage = () => {
   return (
@@ -21,6 +22,7 @@ const LandingPage = () => {
       </div>
       <Work />
       <About />
+      <Contact />
     </>
   );
 };
