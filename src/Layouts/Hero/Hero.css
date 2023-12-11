@@ -1,0 +1,18 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* .intro {
+  height: 275px;
+} */
+
+.headline {
+  font-size: 2rem;
+}
+
+.tagline {
+  width: 70%;
+}
