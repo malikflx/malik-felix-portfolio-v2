@@ -1,3 +1,5 @@
+import "./Work.css";
+
 const Work = () => {
   return (
     <div className="work">
