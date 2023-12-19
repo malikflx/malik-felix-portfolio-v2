@@ -1,0 +1,169 @@
+.logo {
+  height: 4em;
+  width: 9.5em;
+  margin-bottom: 2em;
+}
+
+.logo img {
+  height: 100%;
+  width: 100%;
+  margin: 1em;
+}
+
+.navbar {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  color: var(--dark-mode-text-color);
+  /* background-color: var(--dark-mode-background); */
+  box-shadow: inset 0px -3px 5px -5px rgba(255, 255, 255, 0.5);
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+}
+
+.left {
+  padding: 0 0 0.5em 0.5em;
+}
+
+.right {
+  display: flex;
+  flex-direction: row;
+  padding: 1em;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+}
+
+.nav-item {
+  padding: 1em;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--dark-mode-text-color);
+}
+
+.nav-link:hover {
+  cursor: pointer;
+  color: var(--main-color);
+}
+
+.contact-cta-button {
+  margin: 1.5rem 2rem 1.9rem -2.5rem;
+}
+
+.mobile-contact-button {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+}
+/* :root {
+  --main-color: #5bc0eb;
+  --secondary-color: #1e1e24;
+  --alt-font-color: #828282;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  color: var(--secondary);
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+a:hover,
+a:active,
+a:focus {
+  color: var(--main-color);
+  outline: none;
+  text-decoration: none;
+}
+
+.nav-container ul {
+  padding: 0;
+  margin: 5px 0 0 0;
+}
+
+.nav-container ul li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: inline;
+  font-family: "Roboto", sans-serif;
+}
+.nav-container ul li a {
+  font-size: 18px;
+  padding: 30px 15px;
+  color: rgba(0, 0, 0, 0.7);
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.nav-container ul li a:hover,
+.nav-container ul li a:focus,
+.nav-container ul li a:active {
+  color: black;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-logo {
+  display: flex;
+  align-items: end;
+  justify-content: flex-end;
+  padding-bottom: 0.25em;
+  font-size: 2.5rem;
+}
+
+.main-logo a {
+  color: var(--secondary-color);
+}
+
+.logo {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0;
+  margin: 0;
+  font-size: 36px;
+}
+
+.logo-container img {
+  width: 100%;
+  height: auto;
+  max-width: 3em;
+  margin-top: -2rem;
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.logo-title {
+  font-family: "Roboto", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--alt-font-color);
+}
+
+.main-logo a .logo-punctuation {
+  color: var(--main-color);
+} */
