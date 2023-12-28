@@ -28,17 +28,22 @@
   color: #5bc0eb;
 }
 
-.navbar {
+.navbar-container {
   display: flex;
+  /* position: absolute; */
   position: fixed;
+  top: 0em;
   width: 100%;
-  color: var(--dark-mode-text-color);
+  /* padding-top: 1em;
+  padding-bottom: 0em; */
+  /* color: var(--dark-mode-text-color); */
+  background-color: #fff;
   /* background-color: var(--dark-mode-background); */
   box-shadow: inset 0px -3px 5px -5px rgba(255, 255, 255, 0.5);
   z-index: 1000;
 }
 
-.navbar-container {
+.navbar {
   display: flex;
   justify-content: space-between;
   flex-direction: row;

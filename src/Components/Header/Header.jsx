@@ -28,8 +28,8 @@ const Header = () => {
   window.addEventListener("resize", showButton);
 
   return (
-    <nav className="navbar">
-      <div className="navbar-container">
+    <nav className="navbar-container">
+      <div className="navbar">
         <div className="left">
           <div className="logo">
             <img src={Logo} alt="name-logo" />
@@ -52,11 +52,6 @@ const Header = () => {
             <li className="nav-item">
               <Link className="nav-link" to="/" onClick={closeMobileMenu}>
                 Work
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/" onClick={closeMobileMenu}>
-                Services
               </Link>
             </li>
             <li className="nav-item">
