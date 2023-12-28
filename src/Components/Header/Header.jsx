@@ -32,9 +32,11 @@ const Header = () => {
       <div className="navbar-container">
         <div className="left">
           <div className="logo">
-            <img src={Logo} alt="awdc-logo" />
-            Malik Felix <span className="logo-title">Software Engineer</span>
-            <span className="logo-punctuation">.</span>
+            <img src={Logo} alt="name-logo" />
+            <p>
+              Malik Felix <span className="logo-title">Software Engineer</span>
+              <span className="logo-punctuation">.</span>
+            </p>
           </div>
           <div className="menu-icon" onClick={handleClick}>
             <FontAwesomeIcon icon={click ? faTimes : faBars} />
