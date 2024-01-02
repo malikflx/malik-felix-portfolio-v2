@@ -14,8 +14,9 @@ const Hero = () => {
               I&apos;m Malik
             </h1>
             <p className="tagline">
-              A software engineer and designer passionate about crafting
-              exceptional user experiences.
+              A <span className="highlight">software engineer</span> and{" "}
+              <span className="highlight">designer</span> passionate about
+              crafting exceptional user experiences.
             </p>
           </div>
         </div>
