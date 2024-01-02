@@ -20,8 +20,8 @@ const Hero = () => {
           </div>
         </div>
         <div className="cta">
-          <PrimaryButton>Get a Website</PrimaryButton>
-          <SecondaryButton>Meet Malik</SecondaryButton>
+          <PrimaryButton className="cta-button">Get a Website</PrimaryButton>
+          <SecondaryButton className="cta-button">Meet Malik</SecondaryButton>
         </div>
       </div>
     </>
