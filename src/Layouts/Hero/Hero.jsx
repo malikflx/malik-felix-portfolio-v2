@@ -11,7 +11,7 @@ const Hero = () => {
             <h1>
               Hello!
               <br />
-              I'm Malik
+              I&apos;m Malik
             </h1>
             <p className="tagline">
               A software engineer and designer passionate about crafting
