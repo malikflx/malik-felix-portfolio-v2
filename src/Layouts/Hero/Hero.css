@@ -3,23 +3,21 @@
   flex-direction: column;
   justify-content: center;
   height: 100vh;
-  padding-left: 5em;
-  /* margin-top: -6em; */
   margin-bottom: 6em;
 }
-
-/* .intro {
-  height: 275px;
-} */
 
 .headline {
   font-size: 2.5rem;
 }
 
+.headline h1 {
+  font-size: 7rem;
+  line-height: 1.1;
+}
+
 .headline .tagline {
   font-size: 2.3rem;
   width: 50%;
-  /* margin-top: -1.5em; */
   line-height: 2;
 }
 
@@ -30,8 +28,6 @@
 .cta {
   display: flex;
   flex-direction: row;
-  /* justify-content: space-between; */
-  /* width: 25%; */
 }
 
 .cta-button {

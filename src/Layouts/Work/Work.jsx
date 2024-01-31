@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import PureVibez from "../../assets/images/pure-vibez-screen.png";
 import AwdcLanding from "../../assets/images/awdc-logo-lower-spaced-no-background.png";
 import "./Work.css";

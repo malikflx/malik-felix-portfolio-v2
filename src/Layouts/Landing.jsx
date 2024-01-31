@@ -1,16 +1,18 @@
-import About from "./About/About";
-import Work from "./Work/Work";
-import Contact from "./Contact/Contact";
 import Hero from "./Hero/Hero";
+import Work from "./Work/Work";
+import About from "./About/About";
+import Contact from "./Contact/Contact";
 import "./Landing.css";
 
 const Landing = () => {
   return (
     <>
-      <Hero />
-      <Work />
-      <About />
-      <Contact />
+      <div className="landing">
+        <Hero />
+        <Work />
+        <About />
+        <Contact />
+      </div>
     </>
   );
 };

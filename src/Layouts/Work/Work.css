@@ -1,14 +1,10 @@
 .work {
   height: 100vh;
-  padding-left: 5em;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
   max-width: 1440px;
 }
 
 .work-title {
-  font-size: 3rem;
+  font-size: 6rem;
   font-weight: 600;
   color: var(--main-color);
 }
@@ -16,8 +12,6 @@
 .work-container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
   width: 100%;
 }
 
