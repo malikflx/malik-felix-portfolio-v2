@@ -7,6 +7,15 @@
   --alt-font-color: #828282;
 }
 
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
+}
+
 /* #root { */
 /* max-width: 1280px; */
 /* margin: 0 auto; */

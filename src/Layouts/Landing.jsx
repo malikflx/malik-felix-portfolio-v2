@@ -9,9 +9,9 @@ const Landing = () => {
     <>
       <div className="landing">
         <Hero />
-        <Work />
-        <About />
-        <Contact />
+        {/* <Work /> */}
+        {/* <About /> */}
+        {/* <Contact /> */}
       </div>
     </>
   );

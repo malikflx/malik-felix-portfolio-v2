@@ -2,23 +2,30 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   height: 100vh;
+  width: 100%;
+  margin: 0 auto;
   margin-bottom: 6em;
 }
 
 .headline {
-  font-size: 2.5rem;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .headline h1 {
-  font-size: 7rem;
+  font-size: 6rem;
+  font-weight: 600;
   line-height: 1.1;
 }
 
-.headline .tagline {
-  font-size: 2.3rem;
-  width: 50%;
-  line-height: 2;
+.tagline {
+  margin: 0 auto;
+  padding: 1em;
+  line-height: 1.5;
 }
 
 .highlight {
@@ -27,11 +34,13 @@
 
 .cta {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .cta-button {
-  font-size: 1.3rem !important;
+  width: 100%;
+  font-size: 1.5rem !important;
+  margin: 1.5em 0 0 0;
   padding: 1.6rem 3.2rem 1.6rem 3.2rem !important;
-  margin: 2em 2em 0 0;
 }
