@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import PrimaryButton from "../Buttons/PrimaryButton";
 import Logo from "../../assets/mf_logo_no_border/malikfelixlogo.svg";
 import { Link } from "react-router-dom";
@@ -9,6 +9,7 @@ import "./Header.css";
 const Header = () => {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
+  const navMenuRef = useRef(null);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
@@ -21,14 +22,26 @@ const Header = () => {
     }
   };
 
+  const handleOutsideClick = (e) => {
+    if (navMenuRef.current && !navMenuRef.current.contains(e.target)) {
+      closeMobileMenu();
+    }
+  };
+
   useEffect(() => {
     showButton();
+    window.addEventListener("resize", showButton);
+    window.addEventListener("click", handleOutsideClick);
+    return () => {
+      window.removeEventListener("resize", showButton);
+      window.removeEventListener("click", handleOutsideClick);
+    };
   }, []);
 
   window.addEventListener("resize", showButton);
 
   return (
-    <nav className="navbar-container">
+    <nav className="navbar-container" ref={navMenuRef}>
       <div className="navbar">
         <div className="left">
           <div className="logo">
@@ -79,52 +92,3 @@ const Header = () => {
 };
 
 export default Header;
-
-// import "./Header.css";
-// import Logo from "../../assets/mf_logo_no_border/malikfelixlogo.svg";
-// import { Link } from "react-router-dom";
-
-// const Header = () => {
-//   return (
-//     <>
-//       <div className="header">
-//         <nav className="nav-container">
-//           <div className="top-menu">
-//             <div className="main-nav">
-//               <div className="logo">
-//                 <div className="logo-container">
-//                   <img src={Logo} />
-//                 </div>
-//                 <div className="main-logo">
-//                   <Link to="/">
-//                     Malik Felix{" "}
-//                     <span className="logo-title">Software Engineer</span>
-//                     <span className="logo-punctuation">.</span>
-//                   </Link>
-//                 </div>
-//               </div>
-//               <div className="text-right menu-1">
-//                 <ul>
-//                   <li className="active">
-//                     <Link to="/">Home</Link>
-//                   </li>
-//                   <li className="active">
-//                     <Link to="/">Work</Link>
-//                   </li>
-//                   <li className="active">
-//                     <Link to="/">About</Link>
-//                   </li>
-//                   <li className="active">
-//                     <Link to="/">Contact</Link>
-//                   </li>
-//                 </ul>
-//               </div>
-//             </div>
-//           </div>
-//         </nav>
-//       </div>
-//     </>
-//   );
-// };
-
-// export default Header;
