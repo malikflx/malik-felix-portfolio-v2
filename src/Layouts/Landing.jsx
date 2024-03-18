@@ -10,7 +10,7 @@ const Landing = () => {
       <div className="landing">
         <Hero />
         <Work />
-        {/* <About /> */}
+        <About />
         {/* <Contact /> */}
       </div>
     </>

@@ -6,6 +6,9 @@ const About = () => {
     <div className="about">
       <h2 className="about-title">About</h2>
       <div className="about-container">
+        <div className="bio-image-container">
+          <img src={BioImage} alt="malik-felix-headshot" />
+        </div>
         <div className="bio">
           <p>
             I&apos;m a Software Engineer with a love for all things tech. Born
@@ -35,9 +38,6 @@ const About = () => {
             working together or just want to chat about tech, feel free to drop
             me a line. I&apos;m always up for a good conversation!
           </p>
-        </div>
-        <div className="bio-image-container">
-          <img src={BioImage} alt="malik-felix-headshot" />
         </div>
       </div>
     </div>
