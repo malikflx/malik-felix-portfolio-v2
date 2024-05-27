@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PrimaryButton from "../Buttons/PrimaryButton";
 import SecondaryButton from "../Buttons/SecondaryButton";
 import "./ContactForm.css";
 
@@ -38,6 +39,7 @@ const ContactForm = () => {
         <option value="Website Redesign">Website Redesign</option>
         {/* More options here */}
       </select>
+
       <label>What services do you need?</label>
       <div className="services">
         <SecondaryButton
@@ -57,6 +59,42 @@ const ContactForm = () => {
           Design &amp; Development
         </SecondaryButton>
       </div>
+
+      <label>What are your budget expectations for this project?</label>
+      <select name="budget" value={formData.budget} onChange={handleChange}>
+        <option value="$5,000 - $10,000">$5,000 - $10,000</option>
+        {/* More options here */}
+      </select>
+
+      <label>When do you need this project completed?</label>
+      <select name="timeline" value={formData.timeline} onChange={handleChange}>
+        <option value="Within a month">Within a month</option>
+        {/* More options here */}
+      </select>
+
+      <label>What prompted you to start this project?</label>
+      <textarea name="prompt" value={formData.prompt} onChange={handleChange} />
+
+      <label>What business goals are you trying to achieve?</label>
+      <textarea name="goals" value={formData.goals} onChange={handleChange} />
+
+      <label>Full Name</label>
+      <input
+        type="text"
+        name="name"
+        value={formData.name}
+        onChange={handleChange}
+      />
+
+      <label>Email</label>
+      <input
+        type="email"
+        name="email"
+        value={formData.email}
+        onChange={handleChange}
+      />
+
+      <PrimaryButton type="submit">Submit Project Details!</PrimaryButton>
     </form>
   );
 };
