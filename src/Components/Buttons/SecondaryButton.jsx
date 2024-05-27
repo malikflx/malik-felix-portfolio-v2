@@ -15,7 +15,7 @@ const SecondaryButton = styled.button`
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
   &:hover {
     background-color: #ffffff;
-    color: #00bcc9;
+    color: #1e1e24;
   }
 `;
 

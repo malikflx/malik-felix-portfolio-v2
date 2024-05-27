@@ -4,15 +4,15 @@ import "./About.css";
 const About = () => {
   return (
     <div className="about">
-      <h2 className="about-title">About</h2>
       <div className="about-container">
+        <h2 className="about-title">About</h2>
         <div className="bio-image-container">
           <img src={BioImage} alt="malik-felix-headshot" />
         </div>
         <div className="bio">
           <p>
             I&apos;m a Software Engineer with a love for all things tech. Born
-            and raised in New York City, I now call the Greater Chicago area my
+            and raised in Brooklyn, NY, I now call the Greater Chicago area my
             home. With over 10 years of experience in the technology industry,
             I&apos;ve had the pleasure of working with all sorts of companies,
             from Finance to Public Relations to SaaS companies.

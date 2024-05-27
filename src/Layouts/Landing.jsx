@@ -11,7 +11,7 @@ const Landing = () => {
         <Hero />
         <Work />
         <About />
-        {/* <Contact /> */}
+        <Contact />
       </div>
     </>
   );

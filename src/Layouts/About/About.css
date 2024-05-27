@@ -1,5 +1,8 @@
 .about {
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  /* height: 100vh; */
 }
 
 .about-title {
@@ -8,14 +11,14 @@
   color: var(--main-color);
 }
 
-.about-container {
+/* .about-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   font-size: 2rem;
-}
+} */
 
 .bio p {
   margin: 1em;
