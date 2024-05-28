@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import PrimaryButton from "../Buttons/PrimaryButton";
 import SecondaryButton from "../Buttons/SecondaryButton";
 import "./ContactForm.css";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
-    projectype: "Website Redesign",
+    projectType: "Select a project type",
     services: "Design Only",
     budget: "$5,000 - $10,000",
     timeline: "Within a month",
@@ -13,7 +13,15 @@ const ContactForm = () => {
     goals: "",
     name: "",
     email: "",
+    url: "",
   });
+
+  useEffect(() => {
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      projectype: "Select a project type",
+    }));
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -27,75 +35,120 @@ const ContactForm = () => {
   };
 
   return (
-    <form className="contact-form" onSubmit={handleSubmit}>
-      <h2>Tell me about your project!</h2>
-      <p>With just a few details, we&apos;ll get you up and ready to go.</p>
-      <label>What type of project do you need done?</label>
-      <select
-        name="projectType"
-        value={formData.projectType}
-        onChange={handleChange}
-      >
-        <option value="Website Redesign">Website Redesign</option>
-        {/* More options here */}
-      </select>
-
-      <label>What services do you need?</label>
-      <div className="services">
-        <SecondaryButton
-          className={formData.services === "Design Only" ? "active" : ""}
-          onClick={() => setFormData({ ...formData, services: "Design Only" })}
-        >
-          Design Only
-        </SecondaryButton>
-        <SecondaryButton
-          className={
-            formData.services === "Design & Development" ? "active" : ""
-          }
-          onClick={() =>
-            setFormData({ ...formData, services: "Design & Development" })
-          }
-        >
-          Design &amp; Development
-        </SecondaryButton>
+    <>
+      <div className="hr-title-rule"></div>
+      <div className="contact-form-header">
+        <h2>Tell me about your project!</h2>
+        <p>
+          Just answer a few questions to help me understand your specific needs
+          and I&apos;ll take it from there!
+        </p>
       </div>
+      <form className="contact-form" onSubmit={handleSubmit}>
+        <label>What type of project do you need?</label>
+        <select
+          name="projectType"
+          value={formData.projectType}
+          onChange={handleChange}
+        >
+          <option value="Select a project type">Select a project type</option>
+          <option value="Website Redesign">Website Redesign</option>
+          {/* More options here */}
+        </select>
 
-      <label>What are your budget expectations for this project?</label>
-      <select name="budget" value={formData.budget} onChange={handleChange}>
-        <option value="$5,000 - $10,000">$5,000 - $10,000</option>
-        {/* More options here */}
-      </select>
+        {formData.projectType !== "Select a project type" && (
+          <>
+            <label>What services do you need?</label>
+            <div className="services">
+              <SecondaryButton
+                className={formData.services === "Design Only" ? "active" : ""}
+                onClick={() =>
+                  setFormData({ ...formData, services: "Design Only" })
+                }
+              >
+                Design Only
+              </SecondaryButton>
+              <SecondaryButton
+                className={
+                  formData.services === "Design & Development" ? "active" : ""
+                }
+                onClick={() =>
+                  setFormData({ ...formData, services: "Design & Development" })
+                }
+              >
+                Design &amp; Development
+              </SecondaryButton>
+            </div>
 
-      <label>When do you need this project completed?</label>
-      <select name="timeline" value={formData.timeline} onChange={handleChange}>
-        <option value="Within a month">Within a month</option>
-        {/* More options here */}
-      </select>
+            <label>What are your budget expectations for this project?</label>
+            <select
+              name="budget"
+              value={formData.budget}
+              onChange={handleChange}
+            >
+              <option value="$5,000 - $10,000">$5,000 - $10,000</option>
+              {/* More options here */}
+            </select>
 
-      <label>What prompted you to start this project?</label>
-      <textarea name="prompt" value={formData.prompt} onChange={handleChange} />
+            <label>When do you need this project completed?</label>
+            <select
+              name="timeline"
+              value={formData.timeline}
+              onChange={handleChange}
+            >
+              <option value="Within a month">Within a month</option>
+              {/* More options here */}
+            </select>
 
-      <label>What business goals are you trying to achieve?</label>
-      <textarea name="goals" value={formData.goals} onChange={handleChange} />
+            <label>What prompted you to start this project?</label>
+            <textarea
+              name="prompt"
+              value={formData.prompt}
+              onChange={handleChange}
+              rows="5"
+            />
 
-      <label>Full Name</label>
-      <input
-        type="text"
-        name="name"
-        value={formData.name}
-        onChange={handleChange}
-      />
+            <label>What business goals are you trying to achieve?</label>
+            <textarea
+              name="goals"
+              value={formData.goals}
+              onChange={handleChange}
+              rows="5"
+            />
+          </>
+        )}
 
-      <label>Email</label>
-      <input
-        type="email"
-        name="email"
-        value={formData.email}
-        onChange={handleChange}
-      />
+        <label>Full Name</label>
+        <input
+          type="text"
+          name="name"
+          placeholder="Robert Freeman"
+          value={formData.name}
+          onChange={handleChange}
+        />
 
-      <PrimaryButton type="submit">Submit Project Details!</PrimaryButton>
-    </form>
+        <label>Email</label>
+        <input
+          type="email"
+          name="email"
+          placeholder="youremail@example.com"
+          value={formData.email}
+          onChange={handleChange}
+        />
+
+        <label>
+          Website URL <span className="optional">(optional)</span>
+        </label>
+        <input
+          type="url"
+          name="url"
+          placeholder="https://example.com"
+          value={formData.url}
+          onChange={handleChange}
+        ></input>
+        <PrimaryButton type="submit">Submit Project Details</PrimaryButton>
+      </form>
+    </>
   );
 };
 
