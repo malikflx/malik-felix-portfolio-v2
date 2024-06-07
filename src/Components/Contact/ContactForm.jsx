@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import PrimaryButton from "../Buttons/PrimaryButton";
 import SecondaryButton from "../Buttons/SecondaryButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,6 +8,7 @@ import Avatar from "../../assets/images/malik_headshot.png";
 import "./ContactForm.css";
 
 const ContactForm = () => {
+  const form = useRef();
   const [formData, setFormData] = useState({
     projectType: "Select a project type",
     services: "Design Only",
@@ -34,9 +36,26 @@ const ContactForm = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
     // come back here to add code to send the form data to a server or email
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        form.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          console.log("SUCCESS!", result.text);
+          alert("Your message has been sent successfully!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          alert("There was an error sending your message. Please try again.");
+        }
+      );
     console.log(formData);
   };
 
@@ -50,7 +69,7 @@ const ContactForm = () => {
           and I&apos;ll take it from there!
         </p>
       </div>
-      <form className="contact-form" onSubmit={handleSubmit}>
+      <form className="contact-form" ref={form} onSubmit={sendEmail}>
         <div className="contact-form-intro">
           <div className="contact-image-container">
             <img src={Avatar} alt="malik-felix-headshot" />
@@ -80,6 +99,8 @@ const ContactForm = () => {
               <label>What services do you need?</label>
               <div className="services">
                 <SecondaryButton
+                  name="services"
+                  type="button"
                   className={
                     formData.services === "Design Only" ? "active" : ""
                   }
@@ -90,6 +111,7 @@ const ContactForm = () => {
                   Design Only
                 </SecondaryButton>
                 <SecondaryButton
+                  type="button"
                   className={
                     formData.services === "Design & Development" ? "active" : ""
                   }
@@ -188,8 +210,7 @@ const ContactForm = () => {
                   />
                   <label>Anything else I should know about your project?</label>
                   <textarea
-                    type="text"
-                    name="additional-information"
+                    name="additionalData"
                     value={formData.additionalData}
                     onChange={handleChange}
                     rows="5"

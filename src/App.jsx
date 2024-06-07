@@ -2,6 +2,8 @@ import Landing from "./Layouts/Landing";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./Components/Header/Header";
+import About from "./Layouts/About/About";
+import Contact from "./Layouts/Contact/Contact";
 
 function App() {
   return (
@@ -10,6 +12,8 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Landing />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </Router>
     </>

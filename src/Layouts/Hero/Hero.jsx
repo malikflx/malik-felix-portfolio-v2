@@ -1,5 +1,6 @@
 import PrimaryButton from "../../Components/Buttons/PrimaryButton";
 import SecondaryButton from "../../Components/Buttons/SecondaryButton";
+import { Link } from "react-router-dom";
 import "./Hero.css";
 
 const Hero = () => {
@@ -21,8 +22,12 @@ const Hero = () => {
           </div>
         </div>
         <div className="cta">
-          <PrimaryButton className="cta-button">Get a Website</PrimaryButton>
-          <SecondaryButton className="cta-button">Meet Malik</SecondaryButton>
+          <Link to="/contact">
+            <PrimaryButton className="cta-button">Get a Website</PrimaryButton>
+          </Link>
+          <Link to="/about">
+            <SecondaryButton className="cta-button">Meet Malik</SecondaryButton>
+          </Link>
         </div>
       </div>
     </>
