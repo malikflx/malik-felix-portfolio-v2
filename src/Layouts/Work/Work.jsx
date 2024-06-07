@@ -10,10 +10,10 @@ const Work = () => {
       <div className="work-container">
         <div className="work-item pv-image">
           <img src={PureVibez} alt="pure-vibez-logo" />
-          <div className="content">
+          <div className="content pv-content">
             <h3>Pure Vibez</h3>
             <p>Website for a bartending & catering service</p>
-            <SecondaryButton className="work-button pv-button">
+            <SecondaryButton className="work-button">
               Visit Website
             </SecondaryButton>
           </div>

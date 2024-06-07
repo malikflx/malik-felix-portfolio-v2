@@ -46,9 +46,13 @@
   left: 0;
   position: absolute;
   cursor: pointer;
+}
+
+.pv-content {
   background-color: rgba(213, 175, 52, 0.8);
   border-radius: 5em;
   transition: 0.6s;
+  opacity: 0;
 }
 
 .awdc-content {
@@ -69,6 +73,7 @@
 }
 
 .content:hover,
+.pv-content:hover,
 .awdc-content:hover {
   opacity: 1;
 }
@@ -90,12 +95,14 @@
 }
 
 .content,
+.pv-content,
 .awdc-content > * {
   transform: translateY(1em);
   transition: transform 0.6s;
 }
 
 .content:hover,
+.pv-content:hover,
 .awdc-content:hover > * {
   transform: translateY(0);
 }
