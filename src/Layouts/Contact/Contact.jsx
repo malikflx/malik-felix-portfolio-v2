@@ -16,7 +16,6 @@ const Contact = () => {
           touch, click on my email address to craft a custom messge. Looking
           forward to hearing from you!
         </p>
-        <ContactForm />
         <div className="contact-info">
           <ul className="contact-info-list">
             <li>
@@ -28,6 +27,7 @@ const Contact = () => {
             </li>
           </ul>
         </div>
+        <ContactForm />
       </div>
     </div>
   );

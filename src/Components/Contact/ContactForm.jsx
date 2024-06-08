@@ -39,7 +39,6 @@ const ContactForm = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    // come back here to add code to send the form data to a server or email
     emailjs
       .sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -92,7 +91,6 @@ const ContactForm = () => {
           >
             <option value="Select a project type">Select a project type</option>
             <option value="Website Redesign">Website Redesign</option>
-            {/* More options here */}
           </select>
 
           {formData.projectType !== "Select a project type" && (
@@ -173,7 +171,6 @@ const ContactForm = () => {
                 <option value="1-3 months">1-3 months</option>
                 <option value="3-6 months">3-6 months</option>
                 <option value="6+ months">6+ months</option>
-                {/* More options here */}
               </select>
 
               {formData.timeline === "Less than 1 month" && (
