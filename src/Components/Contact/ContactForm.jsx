@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 import Avatar from "../../assets/images/malik_headshot.png";
 import "./ContactForm.css";
+import SectionBorder from "../Dividers/SectionBorder";
 
 const ContactForm = () => {
   const form = useRef();
@@ -61,7 +62,7 @@ const ContactForm = () => {
 
   return (
     <>
-      <div className="hr-title-rule"></div>
+      <SectionBorder />
       <div className="contact-form-header">
         <h2>Tell me about your project!</h2>
         <p>

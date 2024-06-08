@@ -3,12 +3,13 @@ import PureVibez from "../../assets/images/pure-vibez-screen.png";
 import AwdcLanding from "../../assets/images/awdc-logo-lower-spaced-no-background.png";
 import "./Work.css";
 import SecondaryButton from "../../Components/Buttons/SecondaryButton";
+import SectionBorder from "../../Components/Dividers/SectionBorder";
 
 const Work = () => {
   return (
     <div className="work">
+      <SectionBorder />
       <h2 className="work-title">Work</h2>
-      <hr />
       <div className="work-container">
         <div className="work-item pv-image">
           <img src={PureVibez} alt="pure-vibez-logo" />

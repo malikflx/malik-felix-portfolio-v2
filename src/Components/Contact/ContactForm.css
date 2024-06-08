@@ -1,12 +1,3 @@
-.hr-title-rule {
-  width: 35%;
-  background-color: var(--main-color);
-  height: 0.35em;
-  margin-top: 2em;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 3px;
-}
 .contact-form-header {
   margin-top: 2em;
   margin-bottom: 2em;
