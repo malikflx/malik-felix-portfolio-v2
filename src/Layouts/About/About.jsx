@@ -6,6 +6,7 @@ const About = () => {
     <div className="about">
       <div className="about-container">
         <h2 className="about-title">About</h2>
+        <hr />
         <div className="bio-image-container">
           <img src={BioImage} alt="malik-felix-headshot" />
         </div>
