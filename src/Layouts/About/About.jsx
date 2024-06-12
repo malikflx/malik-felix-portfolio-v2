@@ -1,5 +1,6 @@
 import SectionBorder from "../../Components/Dividers/SectionBorder";
 import BioImage from "../../assets/images/portfolio_avi_white.png";
+import Blockquote from "../../Components/Typography/Blockquote";
 import "./About.css";
 
 const About = () => {
@@ -19,15 +20,13 @@ const About = () => {
             I&apos;ve had the pleasure of working with all sorts of companies,
             from Finance to Public Relations to SaaS companies.
           </p>
-          <blockquote>
-            <p>
-              My passion lies in Front End Development and UI Design, where I
-              use my expertise to build websites and web applications that not
-              only look great but also function well. Whether it&apos;s HTML,
-              CSS, JavaScript, or frameworks like React, Nodejs, or Ruby on
-              Rails, I&apos;m always up for a coding challenge.
-            </p>
-          </blockquote>
+          <Blockquote className="spotlight-quote">
+            My passion lies in Front End Development and UI Design, where I use
+            my expertise to build websites and web applications that not only
+            look great but also function well. Whether it&apos;s HTML, CSS,
+            JavaScript, or frameworks like React, Nodejs, or Ruby on Rails,
+            I&apos;m always up for a coding challenge.
+          </Blockquote>
           <p>
             When I&apos;m not coding, you can find me mentoring others both on
             and off the court. I believe in helping people reach their full

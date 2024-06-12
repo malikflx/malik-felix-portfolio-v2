@@ -1,0 +1,24 @@
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  height: 100vh;
+  background-color: var(--secondary-color);
+  color: #f7f7f7;
+}
+
+.testimonial-title {
+  font-size: 4rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.review-client {
+  margin: 2rem 0 0 1.5rem;
+}
+
+.review-client-name {
+  font-style: none;
+  font-weight: 600;
+  color: var(--main-color);
+}

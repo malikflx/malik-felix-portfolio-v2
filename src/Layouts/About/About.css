@@ -16,13 +16,9 @@
   line-height: 1.5;
 }
 
-.bio blockquote {
-  margin-left: 1em;
-  padding: 1 0px;
-  border-left: 4px solid #3498db;
-  color: #555;
-  line-height: 1.5;
-  font-weight: 400;
+.spotlight-quote {
+  font-style: none !important;
+  font-weight: 500 !important;
 }
 
 .bio-image-container {
