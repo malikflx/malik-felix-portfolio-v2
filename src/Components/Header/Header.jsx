@@ -73,13 +73,9 @@ const Header = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <PrimaryButton
-                to="/"
-                className="mobile-contact-button"
-                onClick={closeMobileMenu}
-              >
+              <Link className="nav-link" to="/" onClick={closeMobileMenu}>
                 Contact
-              </PrimaryButton>
+              </Link>
             </li>
           </ul>
         </div>

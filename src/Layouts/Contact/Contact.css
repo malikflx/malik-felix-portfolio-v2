@@ -3,11 +3,10 @@
   flex-direction: column;
   font-size: 1.5rem;
   line-height: 1.5;
-  height: 100vh;
 }
 
 .contact-title {
   font-size: 4rem;
   font-weight: 600;
-  color: var(--main-color);
+  color: var(--secondary-color);
 }

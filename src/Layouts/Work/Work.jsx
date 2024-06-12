@@ -8,8 +8,8 @@ import SectionBorder from "../../Components/Dividers/SectionBorder";
 const Work = () => {
   return (
     <div className="work">
-      <SectionBorder />
       <h2 className="work-title">Work</h2>
+      <SectionBorder />
       <div className="work-container">
         <div className="work-item pv-image">
           <img src={PureVibez} alt="pure-vibez-logo" />

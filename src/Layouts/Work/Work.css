@@ -1,7 +1,8 @@
 .work-title {
   font-size: 4rem;
   font-weight: 600;
-  color: var(--main-color);
+  text-align: center;
+  color: var(--secondary-color);
 }
 
 .work-container {
