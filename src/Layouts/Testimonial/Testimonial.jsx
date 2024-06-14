@@ -36,9 +36,9 @@ const Testimonal = () => {
             </Blockquote>
             <p className="review-client">
               <span className="review-client-name">
-                D.R. &#39;Solo&#39; Perry.
+                D.R. &#39;Solo&#39; Perry
               </span>
-              , Director/Founder of Ka-Pow!! The Comic Art Academy
+              , Director &amp; Founder of Ka-Pow!! The Comic Art Academy
             </p>
           </div>
         </div>
