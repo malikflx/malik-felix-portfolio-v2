@@ -3,9 +3,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  position: relative;
   width: 100%;
-  margin: 0 auto;
+  margin: 20em auto;
+  padding: 3em;
   margin-bottom: 4em;
 }
 
@@ -28,7 +29,6 @@
 
 .tagline {
   margin: 0 auto;
-  padding: 1em 0 1em 0;
   line-height: 1.5;
   font-weight: 300;
 }

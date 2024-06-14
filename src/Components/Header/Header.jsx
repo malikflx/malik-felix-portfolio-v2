@@ -9,6 +9,8 @@ import "./Header.css";
 const Header = () => {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
+  const [scrollDirection, setScrollDirection] = useState("up");
+  const [prevScrollPosition, setPrevScrollPosition] = useState(window.scrollY);
   const navMenuRef = useRef(null);
 
   const handleClick = () => setClick(!click);
@@ -32,16 +34,35 @@ const Header = () => {
     showButton();
     window.addEventListener("resize", showButton);
     window.addEventListener("click", handleOutsideClick);
+
+    const handleScroll = () => {
+      const currentScrollPosition = window.scrollY;
+      if (prevScrollPosition > currentScrollPosition) {
+        setScrollDirection("up");
+      } else {
+        setScrollDirection("down");
+      }
+      setPrevScrollPosition(currentScrollPosition);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
     return () => {
       window.removeEventListener("resize", showButton);
       window.removeEventListener("click", handleOutsideClick);
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [prevScrollPosition]);
 
   window.addEventListener("resize", showButton);
 
   return (
-    <nav className="navbar-container" ref={navMenuRef}>
+    <nav
+      className={`navbar-container ${
+        scrollDirection === "down" ? "hidden" : ""
+      }`}
+      ref={navMenuRef}
+    >
       <div className="navbar">
         <div className="left">
           <div className="logo">

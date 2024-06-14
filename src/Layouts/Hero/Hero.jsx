@@ -1,9 +1,6 @@
 import PrimaryButton from "../../Components/Buttons/PrimaryButton";
 import SecondaryButton from "../../Components/Buttons/SecondaryButton";
-import { Link as ScrollLink } from "react-scroll";
 import { Link as RouterLink } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import "./Hero.css";
 
 const Hero = () => {
@@ -32,9 +29,6 @@ const Hero = () => {
             <SecondaryButton className="cta-button">Meet Malik</SecondaryButton>
           </RouterLink>
         </div>
-        <ScrollLink to="work" smooth={true} offset={-140}>
-          <FontAwesomeIcon className="down-arrow bounce" icon={faChevronDown} />
-        </ScrollLink>
       </div>
     </>
   );
