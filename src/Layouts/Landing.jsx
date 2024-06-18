@@ -5,6 +5,7 @@ import Contact from "./Contact/Contact";
 import "./Landing.css";
 import Testimonal from "./Testimonial/Testimonial";
 import Service from "./Service/Service";
+import CtaSection from "./CTASection/CtaSection";
 
 const Landing = () => {
   return (
@@ -13,6 +14,7 @@ const Landing = () => {
         <Hero />
         <Testimonal />
         <Service />
+        <CtaSection />
         <Work />
         <About />
         <Contact />

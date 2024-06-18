@@ -1,0 +1,36 @@
+.cta-section {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  padding: 2em;
+  background-color: var(--main-color);
+}
+
+.cta-section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 1em 0 1em 0;
+}
+
+.cta-section-buttons {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 1em;
+  padding-bottom: 1em;
+}
+
+.cta-button {
+  width: 40%;
+  font-size: 1.5rem !important;
+  font-weight: 400 !important;
+  margin: 1em 0 0.5em 0;
+  border-radius: 0 !important;
+}
+
+.primary {
+  background-color: #f7f7f7 !important;
+  color: var(--secondary-color) !important;
+}
