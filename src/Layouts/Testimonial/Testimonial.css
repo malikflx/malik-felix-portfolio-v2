@@ -13,26 +13,3 @@
   font-weight: 600;
   margin-bottom: 1em;
 }
-
-.client-highlight {
-  color: var(--secondary-color);
-  background-color: var(--main-color);
-}
-
-.review-list .review:not(:first-child) {
-  margin-top: 2em;
-}
-
-.testimonial .review div {
-  font-weight: 300;
-}
-
-.review-client {
-  margin: 2rem 0 0 1rem;
-}
-
-.review-client-name {
-  font-style: none;
-  font-weight: 600;
-  color: var(--main-color);
-}
