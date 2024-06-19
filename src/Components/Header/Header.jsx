@@ -8,6 +8,7 @@ import "./Header.css";
 
 const Header = () => {
   const [click, setClick] = useState(false);
+  // eslint-disable-next-line no-unused-vars
   const [button, setButton] = useState(true);
   const [scrollDirection, setScrollDirection] = useState("up");
   const [prevScrollPosition, setPrevScrollPosition] = useState(window.scrollY);

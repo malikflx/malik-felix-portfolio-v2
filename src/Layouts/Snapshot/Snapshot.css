@@ -1,0 +1,36 @@
+.snapshot {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  padding: 2em;
+}
+
+.snapshot-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1em;
+  padding-right: 0.5em;
+  line-height: 1.2;
+}
+
+.snapshot-subtitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.snapshot-description {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+}
+
+.snapshot-description p {
+  padding-bottom: 1em;
+  line-height: 1.5;
+}
+
+.spotlight-quote {
+  font-size: 2rem;
+  padding: 0 1.5em;
+}

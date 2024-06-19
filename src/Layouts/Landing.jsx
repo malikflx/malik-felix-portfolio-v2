@@ -7,6 +7,7 @@ import Testimonial from "./Testimonial/Testimonial";
 import Service from "./Service/Service";
 import CtaSection from "./CTASection/CtaSection";
 import Review from "../Components/Review/Review";
+import Snapshot from "./Snapshot/Snapshot";
 
 const Landing = () => {
   return (
@@ -37,8 +38,7 @@ const Landing = () => {
             clientTitle="Founder & Director at Ka-Pow!! The Comic Art Academy"
           />
         </Testimonial>
-        <About />
-        <Contact />
+        <Snapshot />
       </div>
     </>
   );
