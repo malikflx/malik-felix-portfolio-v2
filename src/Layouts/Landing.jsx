@@ -1,7 +1,5 @@
 import Hero from "./Hero/Hero";
 import Work from "./Work/Work";
-import About from "./About/About";
-import Contact from "./Contact/Contact";
 import "./Landing.css";
 import Testimonial from "./Testimonial/Testimonial";
 import Service from "./Service/Service";
@@ -31,7 +29,7 @@ const Landing = () => {
           <Review
             quoteParts={[
               "Malik Felix and his expertise has been a TRUE ASSET to me and my ventures. From calibrating and improving my branded apps in the Play Store and App Store to ",
-              "Coupled with his pleasant demeanor and exceptional professionalism... he's undoubtedly worth EVERY cent! I look forward to working with him moving forward...indefinitely!",
+              " Coupled with his pleasant demeanor and exceptional professionalism... he's undoubtedly worth EVERY cent! I look forward to working with him moving forward...indefinitely!",
             ]}
             highlight="lending his proficiency in web development by improving the overall function and user experience for my multiple sites."
             clientName="D.R. 'Solo' Perry"

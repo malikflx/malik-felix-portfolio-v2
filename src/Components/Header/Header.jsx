@@ -4,6 +4,7 @@ import Logo from "../../assets/mf_logo_no_border/malikfelixlogo.svg";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import Socials from "../Socials/Socials";
 import "./Header.css";
 
 const Header = () => {
@@ -67,7 +68,7 @@ const Header = () => {
       <div className="navbar">
         <div className="left">
           <div className="logo">
-            <img src={Logo} alt="name-logo" />
+            <img src={Logo} alt="malik-felix-logo" />
             <p>
               Malik Felix <span className="logo-title">Software Engineer</span>
               <span className="logo-punctuation">.</span>
@@ -99,6 +100,7 @@ const Header = () => {
                 Contact
               </Link>
             </li>
+            <Socials className="nav-socials" />
           </ul>
         </div>
       </div>
