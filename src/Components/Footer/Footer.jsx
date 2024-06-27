@@ -19,9 +19,11 @@ const Footer = () => {
             </p>
           </div>
           <div className="footer-tagline">
-            Web development is an art form that requires both creativity and
-            technical skill. You find harmony in the balance of the two
-            paradigms
+            <p>
+              Web development is an art form that requires both creativity and
+              technical skill. You find harmony in the balance of the two
+              paradigms.
+            </p>
           </div>
         </div>
         <div className="footer-links">

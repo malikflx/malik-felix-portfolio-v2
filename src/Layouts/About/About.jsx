@@ -1,14 +1,37 @@
-import SectionBorder from "../../Components/Dividers/SectionBorder";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import BioImage from "../../assets/images/portfolio_avi_white.png";
-import Blockquote from "../../Components/Typography/Blockquote";
+import SecondaryButton from "../../Components/Buttons/SecondaryButton";
+import Review from "../../Components/Review/Review";
+import CtaSection from "../CTASection/CtaSection";
+import Testimonial from "../Testimonial/Testimonial";
 import "./About.css";
+import {
+  faCss3,
+  faFigma,
+  faHtml5,
+  faJs,
+  faNode,
+  faReact,
+  faSquarespace,
+  faWix,
+  faWordpress,
+} from "@fortawesome/free-brands-svg-icons";
 
 const About = () => {
   return (
     <div className="about">
       <div className="about-container">
-        <h2 className="about-title">About</h2>
-        <SectionBorder />
+        <div className="about-intro">
+          <p className="spotlight-quote">
+            Driven by curiosity, powered by code.
+          </p>
+          <p>
+            I&apos;m passionate about Front End Development and UI Design,
+            creating functional, visually appealing websites and web apps with
+            HTML, CSS, JavaScript, React, Node.js, and Ruby on Rails.
+          </p>
+          <SecondaryButton className="secondary">Get in Touch</SecondaryButton>
+        </div>
         <div className="bio-image-container">
           <img src={BioImage} alt="malik-felix-headshot" />
         </div>
@@ -20,26 +43,85 @@ const About = () => {
             I&apos;ve had the pleasure of working with all sorts of companies,
             from Finance to Public Relations to SaaS companies.
           </p>
-          <Blockquote className="spotlight-quote">
-            My passion lies in Front End Development and UI Design, where I use
-            my expertise to build websites and web applications that not only
-            look great but also function well. Whether it&apos;s HTML, CSS,
-            JavaScript, or frameworks like React, Nodejs, or Ruby on Rails,
-            I&apos;m always up for a coding challenge.
-          </Blockquote>
           <p>
             When I&apos;m not coding, you can find me mentoring others both on
-            and off the court. I believe in helping people reach their full
-            potential, and nothing makes me happier than seeing others succeed.
+            and off the court.
+            <p className="spotlight-quote">
+              I believe in helping people reach their full potential, and
+              nothing makes me happier than seeing others succeed.
+            </p>
             In my free time, I love hanging out with family and friends, trying
             out different types of whiskey, and defrazzling with some good
-            old-fashioned video games. I&apos;m also a city person at heart, and
-            I love exploring new places and seeing what other cities have to
-            offer. So, that&apos;s a bit about me! If you&apos;re interested in
-            working together or just want to chat about tech, feel free to drop
-            me a line. I&apos;m always up for a good conversation!
+            old-fashioned video games.
+          </p>
+          <p>
+            I&apos;m also a city person at heart, and I love exploring new
+            places and seeing what other cities have to offer. So, that&apos;s a
+            bit about me! If you&apos;re interested in working together or just
+            want to chat about tech, feel free to drop me a line. I&apos;m
+            always up for a good conversation!
           </p>
         </div>
+        <Testimonial>
+          <Review
+            quoteParts={[
+              "It was an absolute pleasure working with Malik Felix on my business project. ",
+              " Malik has great communication skills.  He addressed all my concerns and updated me on the progression of my project.  His dedication to deliver quality work was highly noticeable.",
+            ]}
+            highlight="His professionalism and quality of work was executed throughout the whole process"
+            clientName="Jamie F."
+            clientTitle="Founder and CEO at Pure Vibez Bartending & Catering"
+          />
+        </Testimonial>
+        <div className="skills">
+          <div className="technology-stack">
+            <h2>Development Tools</h2>
+          </div>
+          <p className="tech-description">
+            I have experience with the following technologies:{" "}
+          </p>
+          <div>
+            <ul className="tech-items">
+              <li className="t-item">
+                <FontAwesomeIcon icon={faHtml5} />
+                <p className="t-item-description">HTML5</p>
+              </li>
+              <li className="t-item">
+                <FontAwesomeIcon icon={faCss3} />
+                <p className="t-item-description">CSS3</p>
+              </li>
+              <li className="t-item">
+                <FontAwesomeIcon icon={faJs} />
+                <p className="t-item-description">JavaScript</p>
+              </li>
+              <li className="t-item">
+                <FontAwesomeIcon icon={faNode} />
+                <p className="t-item-description">NodeJs</p>
+              </li>
+              <li className="t-item">
+                <FontAwesomeIcon icon={faReact} />
+                <p className="t-item-description">React</p>
+              </li>
+              <li className="t-item">
+                <FontAwesomeIcon icon={faSquarespace} />
+                <p className="t-item-description">Squarespace</p>
+              </li>
+              <li className="t-item">
+                <FontAwesomeIcon icon={faWix} />
+                <p className="t-item-description">Wix</p>
+              </li>
+              <li className="t-item">
+                <FontAwesomeIcon icon={faWordpress} />
+                <p className="t-item-description">Wordpress</p>
+              </li>
+              <li className="t-item">
+                <FontAwesomeIcon icon={faFigma} />
+                <p className="t-item-description">Figma</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <CtaSection />
       </div>
     </div>
   );
