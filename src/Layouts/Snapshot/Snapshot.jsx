@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import PrimaryButton from "../../Components/Buttons/PrimaryButton";
 import SecondaryButton from "../../Components/Buttons/SecondaryButton";
 import "./Snapshot.css";
@@ -32,8 +33,14 @@ const Snapshot = () => {
           their digital brand and user experience.
         </p>
       </div>
-      <PrimaryButton className="cta-button primary">Get in Touch</PrimaryButton>
-      <SecondaryButton className="cta-button">See More</SecondaryButton>
+      <Link to="/contact">
+        <PrimaryButton className="cta-button primary">
+          Get in Touch
+        </PrimaryButton>
+      </Link>
+      <Link to="/about">
+        <SecondaryButton className="cta-button">See More</SecondaryButton>
+      </Link>
     </div>
   );
 };

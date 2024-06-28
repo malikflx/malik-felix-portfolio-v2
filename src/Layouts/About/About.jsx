@@ -16,6 +16,7 @@ import {
   faWix,
   faWordpress,
 } from "@fortawesome/free-brands-svg-icons";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -30,7 +31,11 @@ const About = () => {
             creating functional, visually appealing websites and web apps with
             HTML, CSS, JavaScript, React, Node.js, and Ruby on Rails.
           </p>
-          <SecondaryButton className="secondary">Get in Touch</SecondaryButton>
+          <Link to="/contact">
+            <SecondaryButton className="secondary">
+              Get in Touch
+            </SecondaryButton>
+          </Link>
         </div>
         <div className="bio-image-container">
           <img src={BioImage} alt="malik-felix-headshot" />
@@ -68,7 +73,7 @@ const About = () => {
               "It was an absolute pleasure working with Malik Felix on my business project. ",
               " Malik has great communication skills.  He addressed all my concerns and updated me on the progression of my project.  His dedication to deliver quality work was highly noticeable.",
             ]}
-            highlight="His professionalism and quality of work was executed throughout the whole process"
+            highlight="His professionalism and quality of work was executed throughout the whole process."
             clientName="Jamie F."
             clientTitle="Founder and CEO at Pure Vibez Bartending & Catering"
           />

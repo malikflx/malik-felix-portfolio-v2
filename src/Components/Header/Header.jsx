@@ -91,12 +91,16 @@ const Header = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/" onClick={closeMobileMenu}>
+              <Link className="nav-link" to="/about" onClick={closeMobileMenu}>
                 About
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/" onClick={closeMobileMenu}>
+              <Link
+                className="nav-link"
+                to="/contact"
+                onClick={closeMobileMenu}
+              >
                 Contact
               </Link>
             </li>

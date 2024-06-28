@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import PrimaryButton from "../../Components/Buttons/PrimaryButton";
 import SecondaryButton from "../../Components/Buttons/SecondaryButton";
 import "./CtaSection.css";
@@ -15,9 +16,11 @@ const CtaSection = () => {
           delivered promptly.
         </p>
         <div className="cta-section-buttons">
-          <PrimaryButton className="cta-button primary">
-            Get in Touch
-          </PrimaryButton>
+          <Link to="/contact">
+            <PrimaryButton className="cta-button primary">
+              Get in Touch
+            </PrimaryButton>
+          </Link>
           <SecondaryButton className="cta-button">
             Schedule a Call
           </SecondaryButton>
