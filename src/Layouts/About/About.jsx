@@ -81,44 +81,50 @@ const About = () => {
             I have experience with the following technologies:{" "}
           </p>
           <div>
-            <ul className="tech-items">
-              <li className="t-item">
-                <FontAwesomeIcon icon={faHtml5} />
-                <p className="t-item-description">HTML5</p>
-              </li>
-              <li className="t-item">
-                <FontAwesomeIcon icon={faCss3} />
-                <p className="t-item-description">CSS3</p>
-              </li>
-              <li className="t-item">
-                <FontAwesomeIcon icon={faJs} />
-                <p className="t-item-description">JavaScript</p>
-              </li>
-              <li className="t-item">
-                <FontAwesomeIcon icon={faNode} />
-                <p className="t-item-description">NodeJs</p>
-              </li>
-              <li className="t-item">
-                <FontAwesomeIcon icon={faReact} />
-                <p className="t-item-description">React</p>
-              </li>
-              <li className="t-item">
-                <FontAwesomeIcon icon={faSquarespace} />
-                <p className="t-item-description">Squarespace</p>
-              </li>
-              <li className="t-item">
-                <FontAwesomeIcon icon={faWix} />
-                <p className="t-item-description">Wix</p>
-              </li>
-              <li className="t-item">
-                <FontAwesomeIcon icon={faWordpress} />
-                <p className="t-item-description">Wordpress</p>
-              </li>
-              <li className="t-item">
-                <FontAwesomeIcon icon={faFigma} />
-                <p className="t-item-description">Figma</p>
-              </li>
-            </ul>
+            <div className="tech-items-group">
+              <ul className="tech-items">
+                <li className="t-item">
+                  <FontAwesomeIcon icon={faHtml5} />
+                  <p className="t-item-description">HTML5</p>
+                </li>
+                <li className="t-item">
+                  <FontAwesomeIcon icon={faCss3} />
+                  <p className="t-item-description">CSS3</p>
+                </li>
+                <li className="t-item">
+                  <FontAwesomeIcon icon={faJs} />
+                  <p className="t-item-description">JavaScript</p>
+                </li>
+              </ul>
+              <ul className="tech-items">
+                <li className="t-item">
+                  <FontAwesomeIcon icon={faNode} />
+                  <p className="t-item-description">NodeJs</p>
+                </li>
+                <li className="t-item">
+                  <FontAwesomeIcon icon={faReact} />
+                  <p className="t-item-description">React</p>
+                </li>
+                <li className="t-item">
+                  <FontAwesomeIcon icon={faSquarespace} />
+                  <p className="t-item-description">Squarespace</p>
+                </li>
+              </ul>
+              <ul className="tech-items">
+                <li className="t-item">
+                  <FontAwesomeIcon icon={faWix} />
+                  <p className="t-item-description">Wix</p>
+                </li>
+                <li className="t-item">
+                  <FontAwesomeIcon icon={faWordpress} />
+                  <p className="t-item-description">Wordpress</p>
+                </li>
+                <li className="t-item">
+                  <FontAwesomeIcon icon={faFigma} />
+                  <p className="t-item-description">Figma</p>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <CtaSection />
