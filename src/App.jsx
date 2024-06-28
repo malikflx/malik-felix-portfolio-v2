@@ -6,11 +6,13 @@ import About from "./Layouts/About/About";
 import Work from "./Layouts/Work/Work";
 import Contact from "./Layouts/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
+import ScrollTop from "./Components/Utility/ScrollTop/ScrollTop";
 
 function App() {
   return (
     <>
       <Router>
+        <ScrollTop />
         <Header />
         <Routes>
           <Route path="/" element={<Landing />} />
