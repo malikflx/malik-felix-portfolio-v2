@@ -39,7 +39,10 @@ const Header = () => {
 
     const handleScroll = () => {
       const currentScrollPosition = window.scrollY;
-      if (prevScrollPosition > currentScrollPosition) {
+      if (
+        currentScrollPosition === 0 ||
+        prevScrollPosition > currentScrollPosition
+      ) {
         setScrollDirection("up");
       } else {
         setScrollDirection("down");
@@ -61,7 +64,7 @@ const Header = () => {
   return (
     <nav
       className={`navbar-container ${
-        scrollDirection === "down" ? "hidden" : ""
+        scrollDirection === "down" && window.scrollY > 0 ? "hidden" : ""
       }`}
       ref={navMenuRef}
     >
