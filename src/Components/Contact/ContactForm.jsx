@@ -188,7 +188,7 @@ const ContactForm = () => {
                 onChange={handleChange}
               >
                 <option value="Select a product type">
-                  Select a project type
+                  Select a product type
                 </option>
                 <option value="Website/Web Application">
                   Website/Web Application
