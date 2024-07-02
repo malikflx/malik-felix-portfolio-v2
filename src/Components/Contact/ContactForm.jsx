@@ -2,11 +2,9 @@ import { useState, useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import PrimaryButton from "../Buttons/PrimaryButton";
 import SecondaryButton from "../Buttons/SecondaryButton";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 import Avatar from "../../assets/images/malik_headshot.png";
 import "./ContactForm.css";
-import SectionBorder from "../Dividers/SectionBorder";
+import ProjectDetails from "./ProjectDetails";
 
 const ContactForm = () => {
   const form = useRef();
@@ -21,6 +19,9 @@ const ContactForm = () => {
     name: "",
     email: "",
     url: "",
+    apiProvider: "",
+    systems: "",
+    product: "",
   });
 
   useEffect(() => {
@@ -56,19 +57,10 @@ const ContactForm = () => {
           alert("There was an error sending your message. Please try again.");
         }
       );
-    console.log(formData);
   };
 
   return (
     <>
-      <SectionBorder />
-      <div className="contact-form-header">
-        <h2>Tell me about your project!</h2>
-        <p>
-          Just answer a few questions to help me understand your specific needs
-          and I&apos;ll take it from there!
-        </p>
-      </div>
       <form className="contact-form" ref={form} onSubmit={sendEmail}>
         <div className="contact-form-intro">
           <div className="contact-image-container">
@@ -91,9 +83,11 @@ const ContactForm = () => {
           >
             <option value="Select a project type">Select a project type</option>
             <option value="Website Redesign">Website Redesign</option>
+            <option value="API Integration">API Integration</option>
+            <option value="Support">Website/Mobile Application Support</option>
           </select>
 
-          {formData.projectType !== "Select a project type" && (
+          {formData.projectType === "Website Redesign" && (
             <>
               <label>What services do you need?</label>
               <div className="services">
@@ -125,69 +119,7 @@ const ContactForm = () => {
                 </SecondaryButton>
               </div>
 
-              <label>What are your budget expectations for this project?</label>
-              <select
-                name="budget"
-                value={formData.budget}
-                onChange={handleChange}
-              >
-                <option value="Select a budget range">
-                  Select a budget range
-                </option>
-                <option value="Less than $2,000">Less than $2,000</option>
-                <option value="$2,000 - $5,000">$2,000 - $5,000</option>
-                <option value="$5,000 - $10,000">$5,000 - $10,000</option>
-                <option value="$10,000 - $20,000">$10,000 - $20,000</option>
-                <option value="$20,000+">$20,000+</option>
-              </select>
-
-              {formData.budget === "Less than $2,000" && (
-                <div className="field-notice">
-                  <FontAwesomeIcon
-                    className="exclamation"
-                    icon={faCircleExclamation}
-                  />
-                  <p>
-                    Creating a custom solution within this budget might be
-                    challenging, but I still encourage you to share your project
-                    details. I&apos;m committed to guiding you in the right
-                    direction and can recommend alternatives to a custom
-                    solution or trusted professionals who can help meet your
-                    needs.
-                  </p>
-                </div>
-              )}
-
-              <label>When do you need this project completed?</label>
-              <select
-                name="timeline"
-                value={formData.timeline}
-                onChange={handleChange}
-              >
-                <option value="Select a project completion time">
-                  Select a project completion time
-                </option>
-                <option value="Less than 1 month">Less than 1 month</option>
-                <option value="1-3 months">1-3 months</option>
-                <option value="3-6 months">3-6 months</option>
-                <option value="6+ months">6+ months</option>
-              </select>
-
-              {formData.timeline === "Less than 1 month" && (
-                <div className="field-notice">
-                  <FontAwesomeIcon
-                    className="exclamation"
-                    icon={faCircleExclamation}
-                  />
-                  <p>
-                    If you need this project completed in less than a month,
-                    immediate availability may be limited. However, I&apos;d
-                    love to discuss your needs further to confirm availability.
-                    Please note that a 20% expedited service fee may apply in
-                    these cases.
-                  </p>
-                </div>
-              )}
+              <ProjectDetails formData={formData} handleChange={handleChange} />
 
               {formData.timeline !== "Select a project completion time" && (
                 <>
@@ -215,6 +147,65 @@ const ContactForm = () => {
                   />
                 </>
               )}
+            </>
+          )}
+
+          {formData.projectType === "API Integration" && (
+            <>
+              <label>What is the name of the API Provider?</label>
+              <input
+                type="text"
+                name="apiProvider"
+                value={formData.apiProvider}
+                onChange={handleChange}
+              />
+
+              <label>What is the primary purpose of the API Integration?</label>
+              <textarea
+                name="goals"
+                value={formData.goals}
+                onChange={handleChange}
+              />
+              <label>
+                What applications or systems will the API integrate with?
+              </label>
+              <input
+                type="text"
+                name="systems"
+                value={formData.systems}
+                onChange={handleChange}
+              />
+              <ProjectDetails formData={formData} handleChange={handleChange} />
+            </>
+          )}
+
+          {formData.projectType === "Support" && (
+            <>
+              <label>What type of product do you need support with?</label>
+              <select
+                name="product"
+                value={formData.product}
+                onChange={handleChange}
+              >
+                <option value="Select a product type">
+                  Select a project type
+                </option>
+                <option value="Website/Web Application">
+                  Website/Web Application
+                </option>
+                <option value="Mobile Application">Mobile Application</option>
+              </select>
+
+              <label>
+                What specific issues are you facing with your website or
+                application?
+              </label>
+              <textarea
+                name="additionalData"
+                value={formData.additionalData}
+                onChange={handleChange}
+              />
+              <ProjectDetails formData={formData} handleChange={handleChange} />
             </>
           )}
         </div>
@@ -247,7 +238,9 @@ const ContactForm = () => {
           value={formData.url}
           onChange={handleChange}
         ></input>
-        <PrimaryButton type="submit">Submit Project Details</PrimaryButton>
+        <PrimaryButton className="cta-button" type="submit">
+          Submit Project Details
+        </PrimaryButton>
       </form>
     </>
   );

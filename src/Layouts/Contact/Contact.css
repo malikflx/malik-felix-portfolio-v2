@@ -3,10 +3,32 @@
   flex-direction: column;
   font-size: 1.5rem;
   line-height: 1.5;
+  margin-top: 6em;
+  padding: 2em;
+}
+
+.contact-intro {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-intro > * {
+  padding-bottom: 1em;
 }
 
 .contact-title {
   font-size: 4rem;
   font-weight: 600;
   color: var(--secondary-color);
+  padding-bottom: 0.5em;
+}
+
+.contact-info .socials {
+  width: 50%;
+  text-align: left;
+}
+
+.contact-info .socials a {
+  color: var(--secondary-color);
+  padding: 0;
 }
