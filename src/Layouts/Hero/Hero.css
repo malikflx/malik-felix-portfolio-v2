@@ -41,7 +41,6 @@
 }
 
 .tagline {
-  margin: 0 auto;
   line-height: 1.5;
   font-weight: 300;
   opacity: 0;
@@ -80,6 +79,26 @@ a .cta-button {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+@media only screen and (min-width: 1024px) {
+  .headline h1 {
+    font-size: 10rem;
+  }
+
+  .cta {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .cta a {
+    margin-right: 2em;
+    width: 20%;
+  }
+
+  .cta button {
+    width: 100%;
+  }
 }
 
 @keyframes blink-caret {
