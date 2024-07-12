@@ -1,7 +1,6 @@
 .about {
   display: flex;
   flex-direction: column;
-  font-size: 1.5rem;
   margin-top: 6em;
 }
 
@@ -9,7 +8,6 @@
   display: flex;
   flex-direction: column;
   line-height: 1.5;
-  font-size: 1.5rem;
   font-weight: 300;
   padding: 2.5em 2.5em 0 2.5em;
 }

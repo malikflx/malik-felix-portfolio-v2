@@ -238,7 +238,7 @@ const ContactForm = () => {
           value={formData.url}
           onChange={handleChange}
         ></input>
-        <PrimaryButton className="cta-button" type="submit">
+        <PrimaryButton className="cta-submit-button submit" type="submit">
           Submit Project Details
         </PrimaryButton>
       </form>

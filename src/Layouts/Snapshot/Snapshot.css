@@ -1,7 +1,6 @@
 .snapshot {
   display: flex;
   flex-direction: column;
-  font-size: 1.5rem;
   padding: 2em;
 }
 
@@ -33,4 +32,12 @@
 .spotlight-quote {
   font-size: 2rem;
   padding: 0 1.5em;
+}
+
+.snapshot-cta {
+  width: 40%;
+}
+
+a .cta-button {
+  width: 100%;
 }

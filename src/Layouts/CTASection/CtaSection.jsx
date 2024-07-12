@@ -21,9 +21,11 @@ const CtaSection = () => {
               Get in Touch
             </PrimaryButton>
           </Link>
-          <SecondaryButton className="cta-button">
-            Schedule a Call
-          </SecondaryButton>
+          <Link to="/">
+            <SecondaryButton className="cta-button">
+              Schedule a Call
+            </SecondaryButton>
+          </Link>
         </div>
       </div>
     </div>

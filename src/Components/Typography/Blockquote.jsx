@@ -6,8 +6,7 @@ const Blockquote = styled.div`
   padding-right: 2em;
   border-left: 4px solid var(--main-color);
   line-height: 1.5;
-  font-weight: 200;
-  font-style: italic;
+  font-weight: 300;
 `;
 
 export default Blockquote;

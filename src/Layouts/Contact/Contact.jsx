@@ -3,6 +3,7 @@ import ContactForm from "../../Components/Contact/ContactForm.jsx";
 import "./Contact.css";
 import SecondaryButton from "../../Components/Buttons/SecondaryButton.jsx";
 import Socials from "../../Components/Socials/Socials.jsx";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
   return (
@@ -23,9 +24,13 @@ const Contact = () => {
             . Looking forward to hearing from you!
           </p>
           <div className="contact-info">
-            <SecondaryButton className="cta-button">
-              Schedule a call
-            </SecondaryButton>
+            <div className="contact-cta">
+              <Link to="/">
+                <SecondaryButton className="cta-button">
+                  Schedule a call
+                </SecondaryButton>
+              </Link>
+            </div>
             <Socials />
           </div>
         </div>

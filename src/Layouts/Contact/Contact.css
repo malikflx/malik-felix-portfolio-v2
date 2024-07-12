@@ -1,7 +1,6 @@
 .contact {
   display: flex;
   flex-direction: column;
-  font-size: 1.5rem;
   line-height: 1.5;
   margin-top: 6em;
   padding: 2em;
@@ -21,6 +20,14 @@
   font-weight: 600;
   color: var(--secondary-color);
   padding-bottom: 0.5em;
+}
+
+.contact-cta {
+  width: 40%;
+}
+
+a .cta-button {
+  width: 100%;
 }
 
 .contact-info .socials {

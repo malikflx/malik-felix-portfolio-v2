@@ -33,14 +33,16 @@ const Snapshot = () => {
           their digital brand and user experience.
         </p>
       </div>
-      <Link to="/contact">
-        <PrimaryButton className="cta-button primary">
-          Get in Touch
-        </PrimaryButton>
-      </Link>
-      <Link to="/about">
-        <SecondaryButton className="cta-button">See More</SecondaryButton>
-      </Link>
+      <div className="snapshot-cta">
+        <Link to="/contact">
+          <PrimaryButton className="cta-button primary">
+            Get in Touch
+          </PrimaryButton>
+        </Link>
+        <Link to="/about">
+          <SecondaryButton className="cta-button">See More</SecondaryButton>
+        </Link>
+      </div>
     </div>
   );
 };
