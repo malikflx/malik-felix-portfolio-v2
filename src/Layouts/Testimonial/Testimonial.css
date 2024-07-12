@@ -1,7 +1,6 @@
 .testimonial {
   display: flex;
   flex-direction: column;
-  font-size: 1.5rem;
   padding: 2em;
   background-color: var(--secondary-color);
   color: #f7f7f7;

@@ -12,7 +12,7 @@ const Hero = () => {
   useEffect(() => {
     if (!typingStarted) {
       const headline = headlineRef.current;
-      const lines = ["Hello!", "I'm Malik"];
+      const lines = ["Hey!", "I'm Malik"];
       let index = 0;
       let charIndex = 0;
       let currentLine = "";

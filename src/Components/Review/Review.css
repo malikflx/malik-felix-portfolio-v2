@@ -1,10 +1,7 @@
 .client-highlight {
   color: var(--secondary-color);
   background-color: var(--main-color);
-}
-
-.review div {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .review-client {
