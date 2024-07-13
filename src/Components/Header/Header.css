@@ -112,3 +112,41 @@
 .mobile-contact-button {
   display: block;
 }
+
+@media only screen and (min-width: 1024px) {
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: none;
+  }
+
+  .nav-item {
+    font-size: 1.7rem;
+    font-weight: 500;
+  }
+
+  .nav-menu .nav-item:not(:last-of-type) {
+    padding-right: 1.5em;
+  }
+
+  .nav-menu .social-icons {
+    font-size: 1.7rem;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+}
