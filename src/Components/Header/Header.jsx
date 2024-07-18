@@ -1,17 +1,17 @@
-import { useState, useEffect, useRef } from "react";
-import PrimaryButton from "../Buttons/PrimaryButton";
-import Logo from "../../assets/mf_logo_no_border/malikfelixlogo.svg";
-import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
-import Socials from "../Socials/Socials";
-import "./Header.css";
+import { useState, useEffect, useRef } from 'react';
+import PrimaryButton from '../Buttons/PrimaryButton';
+import Logo from '../../assets/mf_logo_no_border/malikfelixlogo.svg';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import Socials from '../Socials/Socials';
+import './Header.css';
 
 const Header = () => {
   const [click, setClick] = useState(false);
   // eslint-disable-next-line no-unused-vars
   const [button, setButton] = useState(true);
-  const [scrollDirection, setScrollDirection] = useState("up");
+  const [scrollDirection, setScrollDirection] = useState('up');
   const [prevScrollPosition, setPrevScrollPosition] = useState(window.scrollY);
   const navMenuRef = useRef(null);
 
@@ -34,8 +34,8 @@ const Header = () => {
 
   useEffect(() => {
     showButton();
-    window.addEventListener("resize", showButton);
-    window.addEventListener("click", handleOutsideClick);
+    window.addEventListener('resize', showButton);
+    window.addEventListener('click', handleOutsideClick);
 
     const handleScroll = () => {
       const currentScrollPosition = window.scrollY;
@@ -43,28 +43,28 @@ const Header = () => {
         currentScrollPosition === 0 ||
         prevScrollPosition > currentScrollPosition
       ) {
-        setScrollDirection("up");
+        setScrollDirection('up');
       } else {
-        setScrollDirection("down");
+        setScrollDirection('down');
       }
       setPrevScrollPosition(currentScrollPosition);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener("resize", showButton);
-      window.removeEventListener("click", handleOutsideClick);
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('resize', showButton);
+      window.removeEventListener('click', handleOutsideClick);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, [prevScrollPosition]);
 
-  window.addEventListener("resize", showButton);
+  window.addEventListener('resize', showButton);
 
   return (
     <nav
       className={`navbar-container ${
-        scrollDirection === "down" && window.scrollY > 0 ? "hidden" : ""
+        scrollDirection === 'down' && window.scrollY > 0 ? 'hidden' : ''
       }`}
       ref={navMenuRef}
     >
@@ -73,7 +73,8 @@ const Header = () => {
           <div className="logo">
             <img src={Logo} alt="malik-felix-logo" />
             <p>
-              Malik Felix <span className="logo-title">Software Engineer</span>
+              Malik Felix <span className="header-logo-pipe">| </span>{' '}
+              <span className="logo-title">Software Engineer</span>
               <span className="logo-punctuation">.</span>
             </p>
           </div>
@@ -82,7 +83,7 @@ const Header = () => {
           </div>
         </div>
         <div className="right">
-          <ul className={click ? "nav-menu active" : "nav-menu"}>
+          <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className="nav-item">
               <Link className="nav-link" to="/" onClick={closeMobileMenu}>
                 Home
