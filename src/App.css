@@ -10,8 +10,6 @@
 #root {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin: 0 auto;
   font-size: 1.7rem;
   font-weight: 300;

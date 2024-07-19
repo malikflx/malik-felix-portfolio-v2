@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
-import PrimaryButton from "../../Components/Buttons/PrimaryButton";
-import SecondaryButton from "../../Components/Buttons/SecondaryButton";
-import "./CtaSection.css";
+import { Link } from 'react-router-dom';
+import PrimaryButton from '../../Components/Buttons/PrimaryButton';
+import SecondaryButton from '../../Components/Buttons/SecondaryButton';
+import './CtaSection.css';
 
 const CtaSection = () => {
   return (
@@ -17,12 +17,12 @@ const CtaSection = () => {
         </p>
         <div className="cta-section-buttons">
           <Link to="/contact">
-            <PrimaryButton className="cta-button primary">
+            <PrimaryButton className="cta-section-cta-button primary">
               Get in Touch
             </PrimaryButton>
           </Link>
           <Link to="/">
-            <SecondaryButton className="cta-button">
+            <SecondaryButton className="cta-section-cta-button">
               Schedule a Call
             </SecondaryButton>
           </Link>

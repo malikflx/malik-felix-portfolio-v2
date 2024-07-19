@@ -29,7 +29,7 @@
 }
 
 .headline h1::after {
-  content: "";
+  content: '';
   display: inline-block;
   width: 5px;
   height: 1em;
@@ -68,12 +68,12 @@
   animation-delay: 2s;
 }
 
-a .cta-button {
+a .hero-cta-button {
   width: 100%;
-  font-size: 1.5rem !important;
-  font-weight: 400 !important;
+  font-size: 1.5rem;
+  font-weight: 400;
   margin: 1em 0 0 0;
-  border-radius: 0 !important;
+  border-radius: 0;
 }
 
 a {
@@ -98,6 +98,25 @@ a {
 
   .cta button {
     width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .hero {
+    max-width: 1280px;
+    padding: 7.5em 0;
+  }
+
+  .headline h1 {
+    font-size: 15rem;
+  }
+
+  .tagline {
+    font-size: 2.5rem;
+  }
+
+  a .hero-cta-button {
+    font-size: 2rem;
   }
 }
 

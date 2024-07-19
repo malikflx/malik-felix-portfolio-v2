@@ -70,14 +70,16 @@ const Header = () => {
     >
       <div className="navbar">
         <div className="left">
-          <div className="logo">
-            <img src={Logo} alt="malik-felix-logo" />
-            <p>
-              Malik Felix <span className="header-logo-pipe">| </span>{' '}
-              <span className="logo-title">Software Engineer</span>
-              <span className="logo-punctuation">.</span>
-            </p>
-          </div>
+          <Link to="/">
+            <div className="logo">
+              <img src={Logo} alt="malik-felix-logo" />
+              <p>
+                Malik Felix <span className="header-logo-pipe">| </span>{' '}
+                <span className="logo-title">Software Engineer</span>
+                <span className="logo-punctuation">.</span>
+              </p>
+            </div>
+          </Link>
           <div className="menu-icon" onClick={handleClick}>
             <FontAwesomeIcon icon={click ? faTimes : faBars} />
           </div>

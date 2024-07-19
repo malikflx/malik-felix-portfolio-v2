@@ -26,3 +26,16 @@
   color: var(--secondary-color);
   margin-bottom: 0.5em;
 }
+
+@media only screen and (min-width: 1024px) {
+  .service {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 6.5em 0;
+    font-size: 2rem;
+  }
+
+  .service-title {
+    font-size: 3rem;
+  }
+}

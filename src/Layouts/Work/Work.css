@@ -102,8 +102,9 @@
   color: #fff;
 }
 
-.content .work-button {
+.content .work-button button {
   margin-top: 2em;
+  border-radius: none;
 }
 
 .content,
@@ -128,4 +129,31 @@
 
 .work-subheading p {
   color: #767676;
+}
+
+@media only screen and (min-width: 1024px) {
+  .work {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 7.5em 0;
+    align-items: first baseline;
+  }
+
+  .work-title {
+    font-size: 4rem;
+  }
+
+  .work-container {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .selected-work {
+    width: 35%;
+  }
+
+  .content p {
+    margin-bottom: 2em;
+  }
 }

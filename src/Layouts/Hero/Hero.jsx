@@ -1,21 +1,21 @@
-import { useEffect, useState, useRef } from "react";
-import PrimaryButton from "../../Components/Buttons/PrimaryButton";
-import SecondaryButton from "../../Components/Buttons/SecondaryButton";
-import { Link as RouterLink } from "react-router-dom";
-import "./Hero.css";
+import { useEffect, useState, useRef } from 'react';
+import PrimaryButton from '../../Components/Buttons/PrimaryButton';
+import SecondaryButton from '../../Components/Buttons/SecondaryButton';
+import { Link as RouterLink } from 'react-router-dom';
+import './Hero.css';
 
 const Hero = () => {
   const headlineRef = useRef(null);
   const [typingStarted, setTypingStarted] = useState(false);
-  const [currentText, setCurrentText] = useState("");
+  const [currentText, setCurrentText] = useState('');
 
   useEffect(() => {
     if (!typingStarted) {
       const headline = headlineRef.current;
-      const lines = ["Hey!", "I'm Malik"];
+      const lines = ['Hey!', "I'm Malik"];
       let index = 0;
       let charIndex = 0;
-      let currentLine = "";
+      let currentLine = '';
 
       const clearContent = () => {
         while (headline.firstChild) {
@@ -33,11 +33,11 @@ const Hero = () => {
           } else {
             index++;
             charIndex = 0;
-            currentLine += "\n";
+            currentLine += '\n';
             setTimeout(type, 500);
           }
         } else {
-          headline.classList.add("finished");
+          headline.classList.add('finished');
         }
       };
 
@@ -56,7 +56,7 @@ const Hero = () => {
               {currentText}
             </h1>
             <p className="tagline">
-              A <span className="highlight">software engineer</span> and{" "}
+              A <span className="highlight">software engineer</span> and{' '}
               <span className="highlight">designer</span> passionate about
               crafting exceptional user experiences.
             </p>
@@ -64,10 +64,14 @@ const Hero = () => {
         </div>
         <div className="cta">
           <RouterLink to="/contact">
-            <PrimaryButton className="cta-button">Get a Website</PrimaryButton>
+            <PrimaryButton className="hero-cta-button">
+              Get a Website
+            </PrimaryButton>
           </RouterLink>
           <RouterLink to="/about">
-            <SecondaryButton className="cta-button">Meet Malik</SecondaryButton>
+            <SecondaryButton className="hero-cta-button">
+              Meet Malik
+            </SecondaryButton>
           </RouterLink>
         </div>
       </div>
