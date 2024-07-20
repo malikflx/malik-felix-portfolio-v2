@@ -16,11 +16,13 @@ const Contact = () => {
             you&apos;re looking for a speedy response, feel free to drop me a
             quick message using the form below. Alternatively, if you prefer a
             more personalized touch, email me directly at{' '}
-            <Mailto
-              className="email-link"
-              label="malikfelix50@gmail.com"
-              mailto="mailto:malikfelix50@gmail.com"
-            />
+            <span className="email-address">
+              <Mailto
+                className="email-link"
+                label="malikfelix50@gmail.com"
+                mailto="mailto:malikfelix50@gmail.com"
+              />
+            </span>
             . Looking forward to hearing from you!
           </p>
           <div className="contact-info">
