@@ -70,4 +70,8 @@ a .snapshot-cta-button {
   .snapshot-subtitle {
     font-size: 2rem;
   }
+
+  a .snapshot-cta-button {
+    width: 35%;
+  }
 }
