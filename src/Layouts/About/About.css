@@ -41,11 +41,18 @@
   font-weight: 500;
 }
 
+.spotlight-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.primary,
 .secondary {
-  width: 40%;
+  width: 48%;
   border-radius: 0 !important;
   font-size: 1.5rem !important;
   font-weight: 500 !important;
+  margin: 0.5em;
 }
 
 .bio-image-container {
@@ -102,4 +109,65 @@
 .t-item .t-item-description {
   font-size: 1.7rem;
   padding: 0.5em;
+}
+
+@media only screen and (min-width: 1024px) {
+  .about-intro,
+  .about-hero,
+  .bio-image-container,
+  .bio-content,
+  .skills {
+    max-width: 1280px;
+    margin: 0 auto;
+    font-size: 2rem;
+  }
+
+  .about-hero {
+    display: flex;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  .about-intro {
+    margin-top: 6em;
+  }
+
+  .spotlight-quote {
+    font-size: 3rem;
+  }
+
+  .spotlight-buttons {
+    flex-direction: row;
+    margin-top: 1em;
+  }
+
+  .spotlight-buttons a {
+    margin-right: 2.5em;
+  }
+
+  .primary,
+  .secondary {
+    width: 100%;
+    margin: 0;
+  }
+
+  .bio-image-container img {
+    width: 80%;
+  }
+
+  .bio-content {
+    padding: 4.5em 0;
+  }
+
+  .skills {
+    padding: 5.5em 0;
+  }
+
+  .technology-stack h2 {
+    font-size: 3rem;
+  }
+
+  .t-item {
+    font-size: 6rem;
+  }
 }

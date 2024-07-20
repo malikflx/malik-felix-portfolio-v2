@@ -101,6 +101,7 @@
   .footer-wrapper {
     max-width: 1440px;
     margin: 0 auto;
+    padding: 4.5em 0 2.5em 0;
   }
 
   .footer-head,
@@ -108,5 +109,9 @@
   .footer-services {
     padding-right: 2em;
     width: 25%;
+  }
+
+  .footer-end {
+    margin-top: 4em;
   }
 }
