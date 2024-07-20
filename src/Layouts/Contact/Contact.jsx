@@ -1,9 +1,9 @@
-import Mailto from "../../Components/Buttons/Mailto.jsx";
-import ContactForm from "../../Components/Contact/ContactForm.jsx";
-import "./Contact.css";
-import SecondaryButton from "../../Components/Buttons/SecondaryButton.jsx";
-import Socials from "../../Components/Socials/Socials.jsx";
-import { Link } from "react-router-dom";
+import Mailto from '../../Components/Buttons/Mailto.jsx';
+import ContactForm from '../../Components/Contact/ContactForm.jsx';
+import './Contact.css';
+import SecondaryButton from '../../Components/Buttons/SecondaryButton.jsx';
+import Socials from '../../Components/Socials/Socials.jsx';
+import { Link } from 'react-router-dom';
 
 const Contact = () => {
   return (
@@ -15,7 +15,7 @@ const Contact = () => {
             Get in touch with me in a way that works best for you! If
             you&apos;re looking for a speedy response, feel free to drop me a
             quick message using the form below. Alternatively, if you prefer a
-            more personalized touch, email me directly at{" "}
+            more personalized touch, email me directly at{' '}
             <Mailto
               className="email-link"
               label="malikfelix50@gmail.com"
@@ -26,7 +26,7 @@ const Contact = () => {
           <div className="contact-info">
             <div className="contact-cta">
               <Link to="/">
-                <SecondaryButton className="cta-button">
+                <SecondaryButton className="cta-contact-button">
                   Schedule a call
                 </SecondaryButton>
               </Link>
@@ -34,7 +34,9 @@ const Contact = () => {
             <Socials />
           </div>
         </div>
-        <ContactForm />
+        <div className="dynamic-contact-form">
+          <ContactForm />
+        </div>
       </div>
     </div>
   );
