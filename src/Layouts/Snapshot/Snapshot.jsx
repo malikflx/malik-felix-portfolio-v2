@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
-import PrimaryButton from "../../Components/Buttons/PrimaryButton";
-import SecondaryButton from "../../Components/Buttons/SecondaryButton";
-import "./Snapshot.css";
+import { Link } from 'react-router-dom';
+import PrimaryButton from '../../Components/Buttons/PrimaryButton';
+import SecondaryButton from '../../Components/Buttons/SecondaryButton';
+import './Snapshot.css';
 
 const Snapshot = () => {
   return (
@@ -35,12 +35,14 @@ const Snapshot = () => {
       </div>
       <div className="snapshot-cta">
         <Link to="/contact">
-          <PrimaryButton className="cta-button primary">
+          <PrimaryButton className="snapshot-cta-button primary">
             Get in Touch
           </PrimaryButton>
         </Link>
         <Link to="/about">
-          <SecondaryButton className="cta-button">See More</SecondaryButton>
+          <SecondaryButton className="snapshot-cta-button">
+            See More
+          </SecondaryButton>
         </Link>
       </div>
     </div>

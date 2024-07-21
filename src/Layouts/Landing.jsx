@@ -1,11 +1,11 @@
-import Hero from "./Hero/Hero";
-import Work from "./Work/Work";
-import "./Landing.css";
-import Testimonial from "./Testimonial/Testimonial";
-import Service from "./Service/Service";
-import CtaSection from "./CTASection/CtaSection";
-import Review from "../Components/Review/Review";
-import Snapshot from "./Snapshot/Snapshot";
+import Hero from './Hero/Hero';
+import Work from './Work/FeaturedWork';
+import './Landing.css';
+import Testimonial from './Testimonial/Testimonial';
+import Service from './Service/Service';
+import CtaSection from './CTASection/CtaSection';
+import Review from '../Components/Review/Review';
+import Snapshot from './Snapshot/Snapshot';
 
 const Landing = () => {
   return (
@@ -28,7 +28,7 @@ const Landing = () => {
         <Testimonial>
           <Review
             quoteParts={[
-              "Malik Felix and his expertise has been a TRUE ASSET to me and my ventures. From calibrating and improving my branded apps in the Play Store and App Store to ",
+              'Malik Felix and his expertise has been a TRUE ASSET to me and my ventures. From calibrating and improving my branded apps in the Play Store and App Store to ',
               " Coupled with his pleasant demeanor and exceptional professionalism... he's undoubtedly worth EVERY cent! I look forward to working with him moving forward...indefinitely!",
             ]}
             highlight="lending his proficiency in web development by improving the overall function and user experience for my multiple sites."

@@ -26,8 +26,12 @@
   width: 40%;
 }
 
-a .cta-button {
+a .cta-contact-button {
   width: 100%;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 1em 0 0.5em 0;
+  border-radius: 0;
 }
 
 .contact-info .socials {
@@ -38,4 +42,30 @@ a .cta-button {
 .contact-info .socials a {
   color: var(--secondary-color);
   padding: 0;
+}
+
+.email-address {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+@media only screen and (min-width: 1024px) {
+  .contact-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 5.5em 0;
+  }
+
+  .contact-cta {
+    width: 20%;
+  }
+
+  .contact-info .socials {
+    align-items: flex-start;
+  }
+
+  .dynamic-contact-form {
+    max-width: 767px;
+    margin: 0 auto;
+  }
 }
