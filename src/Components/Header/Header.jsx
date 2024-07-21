@@ -92,7 +92,7 @@ const Header = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/" onClick={closeMobileMenu}>
+              <Link className="nav-link" to="/work" onClick={closeMobileMenu}>
                 Work
               </Link>
             </li>

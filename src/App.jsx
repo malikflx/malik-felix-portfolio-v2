@@ -8,7 +8,7 @@ import {
 import './App.css';
 import Header from './Components/Header/Header';
 import About from './Layouts/About/About';
-import FeaturedWork from './Layouts/Work/FeaturedWork';
+import Work from './Layouts/Work/Work';
 import Contact from './Layouts/Contact/Contact';
 import Footer from './Components/Footer/Footer';
 import ScrollTop from './Components/Utility/ScrollTop/ScrollTop';
@@ -21,7 +21,7 @@ const AppRoutes = () => {
       <Routes location={location}>
         <Route path="/" element={<Landing />} />
         <Route path="/about" element={<About />} />
-        <Route path="/work" element={<FeaturedWork />} />
+        <Route path="/work" element={<Work />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </TransitionWrapper>
