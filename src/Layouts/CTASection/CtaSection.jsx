@@ -21,7 +21,7 @@ const CtaSection = () => {
               Get in Touch
             </PrimaryButton>
           </Link>
-          <Link to="/">
+          <Link to="https://calendly.com/malikfelix50">
             <SecondaryButton className="cta-section-cta-button">
               Schedule a Call
             </SecondaryButton>

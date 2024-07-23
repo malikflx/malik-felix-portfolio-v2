@@ -27,7 +27,7 @@ const Contact = () => {
           </p>
           <div className="contact-info">
             <div className="contact-cta">
-              <Link to="/">
+              <Link to="https://calendly.com/malikfelix50">
                 <SecondaryButton className="cta-contact-button">
                   Schedule a call
                 </SecondaryButton>
